@@ -11,3 +11,7 @@ How to use Matlab Ver?
 1. Fill in Template.xlsx
 2. Run Gui.fig
 3. Copy the generated coordinates in the coordinated.xlsx and use gsd spline technique to get it into CATIA.
+
+Credits
+Prabin : Concept & Formulation
+Navaneet: Code & UI
