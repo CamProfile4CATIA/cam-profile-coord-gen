@@ -13,5 +13,5 @@ How to use Matlab Ver?
 3. Copy the generated coordinates in the coordinated.xlsx and use gsd spline technique to get it into CATIA.
 
 Credits
-Prabin : Concept & Formulation
-Navaneet: Code & UI
+1. Prabin : Concept & Formulation
+2. Navaneet: Code & UI
