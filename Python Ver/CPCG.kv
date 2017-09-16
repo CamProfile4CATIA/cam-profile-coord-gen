@@ -1,0 +1,81 @@
+<CustButton@Button>:
+    font_size: 32
+
+ScreenManager:
+    PrelimScreen:
+    MainScreen:
+    PostScreen:
+    FinalScreen:
+
+
+<MainLayout>:
+
+
+    id: mainwindow
+    orientation: 'vertical'
+    padding: 10
+    spacing: 10
+
+
+    GridLayout:
+        cols: 2
+        row_force_default: True
+        row_default_height: 45
+
+        GridLayout:
+            cols: 1
+            padding: 250,0,0,0
+            Label:
+                text: "Radius (m):"
+                font_size: 32
+
+
+        GridLayout:
+            cols: 1
+            padding: 50,0,250,0
+            TextInput:
+                id:radius
+                font_size: 32
+                multiline: False
+
+
+    GridLayout:
+        cols: 2
+        row_force_default: True
+        row_default_height: 35
+
+        GridLayout:
+            cols: 1
+            padding: 150,0,0,0
+            Label:
+                text: "Rotation Sense:"
+                font_size: 32
+
+
+        CustomDropDown:
+            Button:
+                id: btn
+                text: 'Press'
+                on_release: dropdown.open(self)
+                size_hint_y: None
+                height: '48dp'
+
+                Widget:
+                    on_parent: dropdown.dismiss()
+
+                DropDown:
+
+                    id: dropdown
+                    on_select: btn.text = '{}'.format(args[1])
+
+                    Button:
+                        text: 'Clock-Wise'
+                        size_hint_y: None
+                        height: '48dp'
+                        on_release: dropdown.select('Clock-Wise')
+
+                    Button:
+                        text: 'Counter Clock-Wise'
+                        size_hint_y: None
+                        height: '48dp'
+                        on_release: dropdown.select('Counter Clock-Wise')
