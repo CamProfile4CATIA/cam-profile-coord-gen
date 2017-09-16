@@ -1,81 +1,153 @@
-<CustButton@Button>:
-    font_size: 32
+#: import SlideTransition kivy.uix.screenmanager.SlideTransition
 
-ScreenManager:
+<BotButton@Button>:
+    size_hint_y: 0.1
+    size_hint_x: 0.5
+    font_size: 30
+
+ScrMgt:
     PrelimScreen:
     MainScreen:
     PostScreen:
     FinalScreen:
 
+<PrelimScreen>:
+    name: 'PrelimScreen'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
 
-<MainLayout>:
+        RelativeLayout:
 
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
 
-    id: mainwindow
-    orientation: 'vertical'
-    padding: 10
-    spacing: 10
+                Label:
+                    text: "Radius (m):"
+                    font_size: 32
 
-
-    GridLayout:
-        cols: 2
-        row_force_default: True
-        row_default_height: 45
-
-        GridLayout:
-            cols: 1
-            padding: 250,0,0,0
-            Label:
-                text: "Radius (m):"
-                font_size: 32
-
-
-        GridLayout:
-            cols: 1
-            padding: 50,0,250,0
-            TextInput:
-                id:radius
-                font_size: 32
-                multiline: False
+                TextInput:
+                    id:radius
+                    font_size: 32
+                    multiline: False
 
 
-    GridLayout:
-        cols: 2
-        row_force_default: True
-        row_default_height: 35
+        RelativeLayout:
 
-        GridLayout:
-            cols: 1
-            padding: 150,0,0,0
-            Label:
-                text: "Rotation Sense:"
-                font_size: 32
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
 
+                Label:
+                    text: "Rotation Sense:"
+                    font_size: 32
 
-        CustomDropDown:
-            Button:
-                id: btn
-                text: 'Press'
-                on_release: dropdown.open(self)
-                size_hint_y: None
-                height: '48dp'
-
-                Widget:
-                    on_parent: dropdown.dismiss()
-
-                DropDown:
-
-                    id: dropdown
-                    on_select: btn.text = '{}'.format(args[1])
-
+                CustomDropDown:
                     Button:
-                        text: 'Clock-Wise'
+                        id: btn
+                        text: 'Press'
+                        on_release: dropdown.open(self)
                         size_hint_y: None
                         height: '48dp'
-                        on_release: dropdown.select('Clock-Wise')
 
-                    Button:
-                        text: 'Counter Clock-Wise'
-                        size_hint_y: None
-                        height: '48dp'
-                        on_release: dropdown.select('Counter Clock-Wise')
+                        Widget:
+                            on_parent: dropdown.dismiss()
+
+                        DropDown:
+
+                            id: dropdown
+                            on_select: btn.text = '{}'.format(args[1])
+
+                            Button:
+                                text: 'Clock-Wise'
+                                size_hint_y: None
+                                height: '48dp'
+                                on_release: dropdown.select('Clock-Wise')
+
+                            Button:
+                                text: 'Counter Clock-Wise'
+                                size_hint_y: None
+                                height: '48dp'
+                                on_release: dropdown.select('Counter Clock-Wise')
+
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="left")
+                app.root.current = 'MainScreen'
+            text: '            Next'
+
+<MainScreen>:
+    name: 'MainScreen'
+
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="left")
+                app.root.current = 'PostScreen'
+            text: '            Next'
+
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="right")
+                app.root.current = 'PrelimScreen'
+            text: 'Prev                 '
+
+
+<PostScreen>:
+    name: 'PostScreen'
+
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="left")
+                app.root.current = 'FinalScreen'
+            text: '            Next'
+
+
+
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="right")
+                app.root.current = 'MainScreen'
+            text: 'Prev                 '
+
+<FinalScreen>:
+    name: 'FinalScreen'
+
+
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="right")
+                app.root.current = 'PostScreen'
+            text: 'Prev                 '
+
