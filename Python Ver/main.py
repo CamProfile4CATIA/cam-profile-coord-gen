@@ -31,6 +31,9 @@ class ScrMgt(ScreenManager):
 class CustomDropDown(BoxLayout):
     pass
 
+class CustomDropDown1(BoxLayout):
+    pass
+
 MasterLayout = Builder.load_file("CPCG.kv")
 
 class CPCGApp(App):

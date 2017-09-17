@@ -1,5 +1,195 @@
 #: import SlideTransition kivy.uix.screenmanager.SlideTransition
 
+
+
+<CustWidget@GridLayout>:
+    row_default_height: '50dp'
+    row_force_default: True
+    cols:4
+
+    CustomDropDown:
+        Button:
+            id:btn1
+            text: 'Select'
+            on_release: dropdown1.open(self)
+            size_hint_y: None
+            height: '48dp'
+
+            Widget:
+                on_parent: dropdown1.dismiss()
+
+            DropDown:
+
+                id: dropdown1
+                on_select: btn1.text = '{}'.format(args[1])
+
+                Button:
+                    text: 'Rise'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown1.select('Rise')
+
+                Button:
+                    text: 'Dwell'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown1.select('Dwell')
+
+                Button:
+                    text: 'Fall'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown1.select('Fall')
+
+
+    CustomDropDown:
+        Button:
+            id:btn2
+            text: 'Select'
+            on_release: dropdown2.open(self)
+            size_hint_y: None
+            height: '48dp'
+
+            Widget:
+                on_parent: dropdown2.dismiss()
+
+            DropDown:
+
+                id: dropdown2
+                on_select: btn2.text = '{}'.format(args[1])
+
+                Button:
+                    text: 'SHM'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown2.select('SHM')
+
+                Button:
+                    text: 'UARM'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown2.select('UARM')
+
+                Button:
+                    text: 'CYCLOIDAL'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown2.select('CYCLOIDAL')
+
+                Button:
+                    text: 'UV'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown2.select('UV')
+
+    TextInput:
+        id:depth
+        font_size: 32
+
+        multiline: False
+    TextInput:
+        id:angle
+        font_size: 32
+
+        multiline: False
+
+
+<MainWidget@GridLayout>:
+
+    cols:4
+    row_default_height: 20
+    row_force_default: True
+
+
+
+    CustomDropDown:
+        Button:
+            id:btn
+            text: 'Select'
+            on_release: dropdown.open(self)
+            size_hint_y: None
+            height: '48dp'
+
+            Widget:
+                on_parent: dropdown.dismiss()
+
+            DropDown:
+
+                id: dropdown
+                on_select: btn.text = '{}'.format(args[1])
+
+                Button:
+                    text: 'Rise'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('Rise')
+
+                Button:
+                    text: 'Dwell'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('Dwell')
+
+                Button:
+                    text: 'Fall'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('Fall')
+
+    CustomDropDown:
+        Button:
+            id:btn
+            text: 'Select'
+            on_release: dropdown.open(self)
+            size_hint_y: None
+            height: '48dp'
+
+            Widget:
+                on_parent: dropdown.dismiss()
+
+            DropDown:
+
+                id: dropdown
+                on_select: btn.text = '{}'.format(args[1])
+
+                Button:
+                    text: 'SHM'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('SHM')
+
+                Button:
+                    text: 'UARM'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('UARM')
+
+                Button:
+                    text: 'CYCLOIDAL'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('CYCLOIDAL')
+
+                Button:
+                    text: 'UV'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release: dropdown.select('UV')
+
+
+
+            TextInput:
+                id:depth
+                font_size: 32
+                multiline: False
+
+            TextInput:
+                id:angle
+                font_size: 32
+                multiline: False
+
+
+
 <BotButton@Button>:
     size_hint_y: 0.1
     size_hint_x: 0.5
@@ -47,7 +237,7 @@ ScrMgt:
                 CustomDropDown:
                     Button:
                         id: btn
-                        text: 'Press'
+                        text: 'Select'
                         on_release: dropdown.open(self)
                         size_hint_y: None
                         height: '48dp'
@@ -85,6 +275,29 @@ ScrMgt:
 
 <MainScreen>:
     name: 'MainScreen'
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        RelativeLayout:
+
+            BoxLayout:
+                size_hint: 1, 0.4
+                pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                orientation: 'vertical'
+
+                on_parent:
+                    if not self.children: \
+                    [self.add_widget(CustWidget()) for i in range(1, 3)]
+
+
+                CustWidget:
+
+                CustWidget:
+                CustWidget:
+
+
 
     AnchorLayout:
         anchor_x: 'right'
