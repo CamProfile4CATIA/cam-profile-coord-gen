@@ -1,5 +1,7 @@
 #: import SlideTransition kivy.uix.screenmanager.SlideTransition
+#: import Window kivy.core.window.Window
 
+#region CustWidget StyleSheet
 
 <CustWidget>:
     row_default_height: '50dp'
@@ -92,18 +94,18 @@
         font_size: 32
 
         multiline: False
-
+#endregion#end of CustWidget StyleSheet
 
 <BotButton@Button>:
     size_hint_y: 0.1
     size_hint_x: 0.5
-    font_size: 30
+    font_size: 30#end of Bottom Button Stylesheet
 
 ScrMgt:
     PrelimScreen:
     MainScreen:
     PostScreen:
-    FinalScreen:
+    FinalScreen:#end of screen mgt screens decleration
 
 <PrelimScreen>:
     name: 'PrelimScreen'
@@ -175,30 +177,24 @@ ScrMgt:
             on_release:
                 root.manager.transition = SlideTransition(direction="left")
                 app.root.current = 'MainScreen'
-            text: '            Next'
+            text: '            Next'#end of prelim screen
 
 <MainScreen>:
     name: 'MainScreen'
     BoxLayout:
         orientation: 'vertical'
-        padding: 10
-        spacing: 10
 
-        MyWidget:
-            box: box
-            size_hint: 1, 1
-            pos_hint: {'center_x':0.5,'center_y': 0.5}
+        ScrollView:
+            size_hint: (1,None)
+            size: (Window.width, Window.height)
 
-            StackLayout:
-                id: box
-                size_hint: 1, 0.18
-                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+
+            MainWidget:
+                cols: 2
                 padding: 10
-                spacing: 10
 
-
-
-
+                size_hint_y: None
+                height: self.minimum_height
 
 
     AnchorLayout:
@@ -221,11 +217,46 @@ ScrMgt:
             on_release:
                 root.manager.transition = SlideTransition(direction="right")
                 app.root.current = 'PrelimScreen'
-            text: 'Prev                 '
-
+            text: 'Prev                 '#end of main screen
 
 <PostScreen>:
     name: 'PostScreen'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        RelativeLayout:
+
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+                Label:
+                    id: loc
+                    font_size: 32
+                    text:'Select Destination'
+                    font_size: 32
+
+        RelativeLayout:
+
+            BoxLayout:
+                size_hint: 0.7, 0.13
+                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+
+                TextInput:
+                    id: loc
+                    font_size: 24
+
+
+                Button:
+                    text: 'Browse'
+                    size_hint: 0.25, 0.95
+
+
+
+
 
     AnchorLayout:
         anchor_x: 'right'
@@ -249,7 +280,7 @@ ScrMgt:
             on_release:
                 root.manager.transition = SlideTransition(direction="right")
                 app.root.current = 'MainScreen'
-            text: 'Prev                 '
+            text: 'Prev                 '#end of post screen
 
 <FinalScreen>:
     name: 'FinalScreen'
@@ -264,5 +295,5 @@ ScrMgt:
             on_release:
                 root.manager.transition = SlideTransition(direction="right")
                 app.root.current = 'PostScreen'
-            text: 'Prev                 '
+            text: 'Prev                 '#end of final screen
 

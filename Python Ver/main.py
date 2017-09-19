@@ -1,7 +1,10 @@
 import kivy
 
-kivy.require("1.9.0")
+#region Imports
 
+
+kivy.require("1.9.0")
+from kivy.uix.stacklayout import StackLayout
 from kivy.app import App
 from kivy.lang import Builder
 from kivy.uix.floatlayout import FloatLayout
@@ -12,12 +15,17 @@ from kivy.uix.relativelayout import RelativeLayout
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
+from kivy.uix.scrollview import ScrollView
+
+#endregion
 
 class CustomDropDown(BoxLayout):
     pass
+
 class CustWidget(GridLayout):
     pass
 
+#region Screen Classes
 class PrelimScreen(Screen):
 #Ask for rotatin  sense and radius
     pass
@@ -25,8 +33,6 @@ class PrelimScreen(Screen):
 class MainScreen(Screen):
 #Ask for motions and other parameters
     pass
-
-
 
 class PostScreen(Screen):
 #Ask for Output file location
@@ -39,31 +45,30 @@ class FinalScreen(Screen):
 class ScrMgt(ScreenManager):
     pass
 
+#endregion
 
+class MainWidget(GridLayout):
 
+    def __init__(self,**kwargs):
+        super(MainWidget,self).__init__(**kwargs)
 
-
-class MyWidget(RelativeLayout):
-    box = ObjectProperty(None)
-
-    def on_box(self, *args):
         def callback(instance):
-            print('The button <%s> is being pressed' % instance.text)
-            self.box.add_widget(CustWidget())
-            btn1 = Button(text='+', height='52dp',  size_hint=(0.07, None))
-            self.box.add_widget(btn1)
-            btn1.bind(on_press=callback)
+            print('The button <%s> is being pressed' % instance.id)
+            if instance.text=="+":
+                instance.text = 'Inactive'
+                i=int(instance.id[10:])
+                i+=1
 
-        self.box.add_widget(CustWidget())
-        btn1 = Button(text='+', height='52dp',  size_hint=(0.07, None))
-        self.box.add_widget(btn1)
-        btn1.bind(on_press=callback)
+                self.add_widget(CustWidget(id='custwid'+str(i)))
+                btn = Button(id='plusbutton'+str(i), text='+', height='52dp', size_hint=(0.07, None))
+                self.add_widget(btn)
+                btn.bind(on_press=callback)
 
-
-Factory.register('MyWidget', cls=MyWidget)
-
-
-
+        i=1
+        self.add_widget(CustWidget(id='custwid'+str(i)))
+        btn = Button(id='plusbutton'+str(i), text='+', height='52dp', size_hint=(0.07, None))
+        self.add_widget(btn)
+        btn.bind(on_press=callback)
 
 class CPCGeApp(App):
     def build(self):

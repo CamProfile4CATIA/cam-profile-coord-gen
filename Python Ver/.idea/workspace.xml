@@ -14,9 +14,14 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="57" column="63" lean-forward="false" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
-              <folding />
+            <state relative-caret-position="221">
+              <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+              <folding>
+                <element signature="e#13#28#0" expanded="false" />
+                <element signature="e#656#678#0" expanded="false" />
+                <element signature="e#1068#1864#0" expanded="false" />
+                <element signature="e#1891#1951#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,20 +29,18 @@
       <file leaf-file-name="CPCG.kv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CPCG.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2686">
-              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="testkvloop.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testkvloop.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="449">
-              <caret line="59" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+            <state relative-caret-position="51">
+              <caret line="96" column="39" lean-forward="false" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
+                <marker date="1505834784059" expanded="false" signature="107:2478" ph="..." />
+                <marker date="1505834784059" expanded="true" signature="138:2469" ph="..." />
+                <marker date="1505834784059" expanded="false" signature="2509:2588" ph="..." />
+                <marker date="1505834784059" expanded="false" signature="2622:2696" ph="..." />
+                <marker date="1505834784059" expanded="false" signature="2736:4824" ph="..." />
+                <marker date="1505834784059" expanded="true" signature="4847:5188" ph="..." />
+                <marker date="1505834784059" expanded="false" signature="4847:5786" ph="..." />
+                <marker date="1505834784059" expanded="false" signature="5807:7186" ph="..." />
+                <marker date="1505834784059" expanded="false" signature="7207:7546" ph="..." />
               </folding>
             </state>
           </provider>
@@ -61,6 +64,8 @@
       <find>an</find>
       <find>grid</find>
       <find>custW</find>
+      <find>ma</find>
+      <find>win</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -77,16 +82,37 @@
         <option value="$PROJECT_DIR$/CustWid.py" />
         <option value="$PROJECT_DIR$/custwid.py" />
         <option value="$PROJECT_DIR$/impscr.py" />
+        <option value="$PROJECT_DIR$/Scrolltest.py" />
+        <option value="$PROJECT_DIR$/scrolltest2.py" />
+        <option value="$PROJECT_DIR$/scrolltest3.py" />
         <option value="$PROJECT_DIR$/testkvloop.py" />
-        <option value="$PROJECT_DIR$/CPCG.kv" />
+        <option value="$PROJECT_DIR$/fruit.py" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/CPCG.kv" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="797" />
+    <option name="y" value="7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Buildout</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -135,8 +161,8 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../TestScreen" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.appearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
   </component>
   <component name="RunDashboard">
@@ -152,7 +178,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration name="CustWid" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Scrolltest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -164,12 +190,12 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python Ver" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CustWid.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Scrolltest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="impscr" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="fruit" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -181,7 +207,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Python Ver" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/impscr.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fruit.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -203,6 +229,23 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="scrolltest3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Python Ver" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scrolltest3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="testkvloop" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -220,18 +263,20 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <list size="4">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.CustWid" />
-      <item index="2" class="java.lang.String" itemvalue="Python.impscr" />
-      <item index="3" class="java.lang.String" itemvalue="Python.testkvloop" />
+      <item index="1" class="java.lang.String" itemvalue="Python.testkvloop" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Scrolltest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.scrolltest3" />
+      <item index="4" class="java.lang.String" itemvalue="Python.fruit" />
     </list>
     <recent_temporary>
-      <list size="4">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.testkvloop" />
-        <item index="2" class="java.lang.String" itemvalue="Python.impscr" />
-        <item index="3" class="java.lang.String" itemvalue="Python.CustWid" />
+        <item index="1" class="java.lang.String" itemvalue="Python.fruit" />
+        <item index="2" class="java.lang.String" itemvalue="Python.scrolltest3" />
+        <item index="3" class="java.lang.String" itemvalue="Python.testkvloop" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Scrolltest" />
       </list>
     </recent_temporary>
   </component>
@@ -252,18 +297,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.36012527" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1796875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20678686" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2118551" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2076087" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33297643" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.402854" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40434784" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -305,16 +350,103 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="25" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="70" lean-forward="false" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="70" />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#656#678#0" expanded="false" />
+            <element signature="e#1068#1864#0" expanded="false" />
+            <element signature="e#1891#1951#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testkvloop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CPCG.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4403">
+          <caret line="259" column="35" lean-forward="false" selection-start-line="259" selection-start-column="35" selection-end-line="259" selection-end-column="35" />
+          <folding>
+            <marker date="1505834784059" expanded="false" signature="107:2478" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="138:2469" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2509:2588" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2622:2696" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2736:4824" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="4847:5188" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="4847:5786" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="5807:7186" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="7207:7546" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="70" lean-forward="false" selection-start-line="57" selection-start-column="48" selection-end-line="57" selection-end-column="70" />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#656#678#0" expanded="false" />
+            <element signature="e#1068#1864#0" expanded="false" />
+            <element signature="e#1891#1951#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testkvloop.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CPCG.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4403">
+          <caret line="259" column="35" lean-forward="false" selection-start-line="259" selection-start-column="35" selection-end-line="259" selection-end-column="35" />
+          <folding>
+            <marker date="1505834784059" expanded="false" signature="107:2478" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="138:2469" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2509:2588" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2622:2696" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2736:4824" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="4847:5188" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="4847:5786" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="5807:7186" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="7207:7546" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="40" />
-          <folding />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#656#678#0" expanded="false" />
+            <element signature="e#1068#1864#0" expanded="false" />
+            <element signature="e#1891#1951#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -322,7 +454,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1581">
           <caret line="93" column="0" lean-forward="true" selection-start-line="3" selection-start-column="4" selection-end-line="93" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1505834784059" expanded="false" signature="107:2478" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="138:2469" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2509:2588" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2622:2696" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2736:4824" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="4847:5188" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="4847:5786" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="5807:7186" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="7207:7546" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -330,7 +472,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#656#678#0" expanded="false" />
+            <element signature="e#1068#1864#0" expanded="false" />
+            <element signature="e#1891#1951#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -338,7 +485,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="748">
           <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1505834784059" expanded="false" signature="107:2478" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="138:2469" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2509:2588" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2622:2696" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2736:4824" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="4847:5188" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="4847:5786" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="5807:7186" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="7207:7546" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -414,9 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -424,9 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -438,77 +589,154 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/relativelayout.py">
+    <entry file="file://$PROJECT_DIR$/scrolltest3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="289" column="0" lean-forward="false" selection-start-line="289" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="465">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/widget.py">
+    <entry file="file://$PROJECT_DIR$/scrolltest2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="457" column="0" lean-forward="false" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="153">
+          <caret line="9" column="23" lean-forward="false" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#44#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/screenmanager.py">
+    <entry file="file://$PROJECT_DIR$/Scrolltest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="1188" column="0" lean-forward="false" selection-start-line="1188" selection-start-column="0" selection-end-line="1188" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#33#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/core/window/__init__.py">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/lang/builder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="1187" column="0" lean-forward="false" selection-start-line="1187" selection-start-column="0" selection-end-line="1187" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="238" column="31" lean-forward="true" selection-start-line="238" selection-start-column="31" selection-end-line="238" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/behaviors/button.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+        <state relative-caret-position="231">
+          <caret line="612" column="0" lean-forward="false" selection-start-line="612" selection-start-column="0" selection-end-line="612" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testkvloop.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="449">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        <state relative-caret-position="239">
+          <caret line="63" column="15" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="43" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fruit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="38" column="37" lean-forward="false" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/scrollview.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="832" column="0" lean-forward="false" selection-start-line="832" selection-start-column="0" selection-end-line="832" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/relativelayout.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="303" column="0" lean-forward="false" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/widget.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="478" column="0" lean-forward="false" selection-start-line="478" selection-start-column="0" selection-end-line="478" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/screenmanager.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="1198" column="0" lean-forward="false" selection-start-line="1198" selection-start-column="0" selection-end-line="1198" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/core/window/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="1191" column="0" lean-forward="false" selection-start-line="1191" selection-start-column="0" selection-end-line="1191" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="421">
+          <caret line="341" column="0" lean-forward="false" selection-start-line="341" selection-start-column="0" selection-end-line="341" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/behaviors/button.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="150" column="0" lean-forward="false" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/core/window/window_sdl2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="662" column="0" lean-forward="false" selection-start-line="662" selection-start-column="0" selection-end-line="662" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CPCG.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2686">
-          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding />
+        <state relative-caret-position="51">
+          <caret line="96" column="39" lean-forward="false" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
+          <folding>
+            <marker date="1505834784059" expanded="false" signature="107:2478" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="138:2469" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2509:2588" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2622:2696" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="2736:4824" ph="..." />
+            <marker date="1505834784059" expanded="true" signature="4847:5188" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="4847:5786" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="5807:7186" ph="..." />
+            <marker date="1505834784059" expanded="false" signature="7207:7546" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="57" column="63" lean-forward="false" selection-start-line="57" selection-start-column="63" selection-end-line="57" selection-end-column="63" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#656#678#0" expanded="false" />
+            <element signature="e#1068#1864#0" expanded="false" />
+            <element signature="e#1891#1951#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
