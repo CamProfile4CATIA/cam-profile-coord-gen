@@ -19,10 +19,34 @@ from kivy.uix.scrollview import ScrollView
 
 #endregion
 
+
+
+class MyCam(object):
+    def __init__(self):
+        self.rotationSense= None
+        self.radius=None
+        self.seqArray=None
+
+    def set_rotationSense(self,rot):
+        self.rotationSense = rot
+
+    def set_radius(self,rad):
+        self.rotationSense = rad
+
+    def set_radius(self,array):
+        self.seqArray=array
+
+global Cam
+Cam = MyCam()
+Cam.set_rotationSense('CW')
+
+
+
+
 class CustomDropDown(BoxLayout):
     pass
 
-class CustWidget(GridLayout):
+class MainWidget(GridLayout):
     pass
 
 #region Screen Classes
@@ -47,25 +71,27 @@ class ScrMgt(ScreenManager):
 
 #endregion
 
-class MainWidget(GridLayout):
+class MainWidgetWrapper(GridLayout):
 
     def __init__(self,**kwargs):
-        super(MainWidget,self).__init__(**kwargs)
+        super(MainWidgetWrapper,self).__init__(**kwargs)
 
         def callback(instance):
             print('The button <%s> is being pressed' % instance.id)
             if instance.text=="+":
                 instance.text = 'Inactive'
+                instance.font_size = 15
                 i=int(instance.id[10:])
                 i+=1
 
-                self.add_widget(CustWidget(id='custwid'+str(i)))
+
+                self.add_widget(MainWidget(id='custwid'+str(i)))
                 btn = Button(id='plusbutton'+str(i), text='+', height='52dp', size_hint=(0.07, None))
                 self.add_widget(btn)
                 btn.bind(on_press=callback)
 
         i=1
-        self.add_widget(CustWidget(id='custwid'+str(i)))
+        self.add_widget(MainWidget(id='custwid'+str(i)))
         btn = Button(id='plusbutton'+str(i), text='+', height='52dp', size_hint=(0.07, None))
         self.add_widget(btn)
         btn.bind(on_press=callback)

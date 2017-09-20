@@ -3,7 +3,14 @@
 
 #region CustWidget StyleSheet
 
-<CustWidget>:
+<Label>:
+    font_size:20
+
+<MainWidget>:
+    btn1:btn1
+    btn2:btn2
+    depth:depth
+    angle:angle
     row_default_height: '50dp'
     row_force_default: True
     cols:4
@@ -94,7 +101,7 @@
         font_size: 32
 
         multiline: False
-#endregion#end of CustWidget StyleSheet
+#endregion#end of MainWidget StyleSheet
 
 <BotButton@Button>:
     size_hint_y: 0.1
@@ -183,18 +190,34 @@ ScrMgt:
     name: 'MainScreen'
     BoxLayout:
         orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 0.93, 0.5
+            padding: 10, 10, 10, 0
+            Label:
+                text:'Action'
+            Label:
+                text:'Motion Type'
+            Label:
+                text:'Displacement'
+            Label:
+                text:'Degree'
+
 
         ScrollView:
             size_hint: (1,None)
-            size: (Window.width, Window.height)
+            size: (Window.width, Window.height*0.79)
 
 
-            MainWidget:
+
+            MainWidgetWrapper:
                 cols: 2
                 padding: 10
-
                 size_hint_y: None
                 height: self.minimum_height
+
+
+        Widget:
 
 
     AnchorLayout:
