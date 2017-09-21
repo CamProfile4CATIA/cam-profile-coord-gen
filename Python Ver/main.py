@@ -16,6 +16,8 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.uix.scrollview import ScrollView
+from kivy.uix.widget import Widget
+
 
 #endregion
 
@@ -75,26 +77,22 @@ class MainWidgetWrapper(GridLayout):
 
     def __init__(self,**kwargs):
         super(MainWidgetWrapper,self).__init__(**kwargs)
+        self.add_widget(MainWidget(id='mainwid1'))
+        self.btn = Button(id='plusbutton1', text='+', height='52dp', size_hint=(0.07, None))
+        self.add_widget(self.btn)
+        self.btn.bind(on_press=self.addonemore)
 
-        def callback(instance):
-            print('The button <%s> is being pressed' % instance.id)
-            if instance.text=="+":
-                instance.text = 'Inactive'
-                instance.font_size = 15
-                i=int(instance.id[10:])
-                i+=1
-
-
-                self.add_widget(MainWidget(id='custwid'+str(i)))
-                btn = Button(id='plusbutton'+str(i), text='+', height='52dp', size_hint=(0.07, None))
-                self.add_widget(btn)
-                btn.bind(on_press=callback)
-
-        i=1
-        self.add_widget(MainWidget(id='custwid'+str(i)))
-        btn = Button(id='plusbutton'+str(i), text='+', height='52dp', size_hint=(0.07, None))
-        self.add_widget(btn)
-        btn.bind(on_press=callback)
+    def addonemore(self,instance):
+        i = int(instance.id[10:])
+        i+=1
+        print('The button <%s> is being pressed' % instance.id)
+        fillerwidget = Widget(height='52dp', size_hint=(0.07, None))
+        self.remove_widget(self.btn)
+        self.add_widget(fillerwidget)
+        self.add_widget(MainWidget(id='mainwid'+str(i)))
+        self.btn.id='plusbutton'+str(i)
+        self.add_widget(self.btn)
+        self.btn.bind(on_press=self.addonemore)
 
 class CPCGeApp(App):
     def build(self):
