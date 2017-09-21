@@ -36,19 +36,27 @@
                     text: 'Rise'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown1.select('Rise')
+                    on_release:
+                        dropdown1.select('Rise')
+                        root.feed(root.id[7:],1,self.text)
+
 
                 Button:
                     text: 'Dwell'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown1.select('Dwell')
+                    on_release:
+                        dropdown1.select('Dwell')
+                        root.feed(root.id[7:],1,self.text)
+
 
                 Button:
                     text: 'Fall'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown1.select('Fall')
+                    on_release:
+                        dropdown1.select('Fall')
+                        root.feed(root.id[7:],1,self.text)
 
 
     CustomDropDown:
@@ -71,36 +79,55 @@
                     text: 'SHM'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown2.select('SHM')
+                    on_release:
+                        dropdown2.select('SHM')
+                        root.feed(root.id[7:],2,self.text)
 
                 Button:
                     text: 'UARM'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown2.select('UARM')
+                    on_release:
+                        dropdown2.select('UARM')
+                        root.feed(root.id[7:],2,self.text)
 
                 Button:
                     text: 'CYCLOIDAL'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown2.select('CYCLOIDAL')
+                    on_release:
+                        dropdown2.select('CYCLOIDAL')
+                        root.feed(root.id[7:],2,self.text)
+
 
                 Button:
                     text: 'UV'
                     size_hint_y: None
                     height: '48dp'
-                    on_release: dropdown2.select('UV')
+                    on_release:
+                        dropdown2.select('UV')
+                        root.feed(root.id[7:],2,self.text)
 
     TextInput:
         id:depth
-        font_size: 32
-
+        font_size: 20
         multiline: False
+        padding_y: (self.height-self.font_size)/2
+        padding_x: self.width/2 # initial padding
+        on_text:
+            root.feed(root.id[7:],4,self.text)
+            root.update_padding(args[0])
+
     TextInput:
         id:angle
-        font_size: 32
-
+        font_size: 20
         multiline: False
+        padding_y: (self.height-self.font_size)/2
+        padding_x: self.width/2 # initial padding
+        on_text:
+            root.feed(root.id[7:],4,self.text)
+            root.update_padding(args[0])
+
 #endregion#end of MainWidget StyleSheet
 
 <BotButton@Button>:

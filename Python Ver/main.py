@@ -2,7 +2,7 @@ import kivy
 
 #region Imports
 
-
+import numpy as np
 kivy.require("1.9.0")
 from kivy.uix.stacklayout import StackLayout
 from kivy.app import App
@@ -42,6 +42,11 @@ global Cam
 Cam = MyCam()
 Cam.set_rotationSense('CW')
 
+global SeqArray
+SeqArray=np.array([['first', 0, 0, 0],
+[0, 0, 0,0]])
+
+
 
 
 
@@ -49,7 +54,24 @@ class CustomDropDown(BoxLayout):
     pass
 
 class MainWidget(GridLayout):
-    pass
+    def feed(self,row,col,data):
+        global SeqArray
+        row=int(row)
+        col=int(col)
+        if row>(SeqArray.size/4):
+            newrow=np.array(['first',0, 0, 0])
+            SeqArray=np.vstack((SeqArray,newrow))
+        SeqArray[(row-1),(col-1)]=data
+        print(SeqArray)
+
+    def update_padding(self, text_input, *args):
+        text_width = text_input._get_text_width(
+            text_input.text,
+            text_input.tab_width,
+            text_input._label_cached
+        )
+        text_input.padding_x = (text_input.width - text_width)/2
+
 
 #region Screen Classes
 class PrelimScreen(Screen):
@@ -57,8 +79,9 @@ class PrelimScreen(Screen):
     pass
 
 class MainScreen(Screen):
-#Ask for motions and other parameters
-    pass
+    def feed(self,instance):
+        print ('He')
+
 
 class PostScreen(Screen):
 #Ask for Output file location
@@ -93,6 +116,10 @@ class MainWidgetWrapper(GridLayout):
         self.btn.id='plusbutton'+str(i)
         self.add_widget(self.btn)
         self.btn.bind(on_press=self.addonemore)
+
+
+
+
 
 class CPCGeApp(App):
     def build(self):
