@@ -114,8 +114,9 @@
         multiline: False
         padding_y: (self.height-self.font_size)/2
         padding_x: self.width/2 # initial padding
+        input_filter: 'float'
         on_text:
-            root.feed(root.id[7:],4,self.text)
+            root.feed(root.id[7:],3,self.text)
             root.update_padding(args[0])
 
     TextInput:
@@ -124,6 +125,7 @@
         multiline: False
         padding_y: (self.height-self.font_size)/2
         padding_x: self.width/2 # initial padding
+        input_filter: 'float'
         on_text:
             root.feed(root.id[7:],4,self.text)
             root.update_padding(args[0])
@@ -162,6 +164,11 @@ ScrMgt:
                     id:radius
                     font_size: 32
                     multiline: False
+                    padding_x: self.width/2 # initial padding
+                    input_filter: 'float'
+                    on_text:
+                        root.update_padding(args[0])
+                        root.assign_rad(self.text)
 
 
         RelativeLayout:
@@ -194,13 +201,17 @@ ScrMgt:
                                 text: 'Clock-Wise'
                                 size_hint_y: None
                                 height: '48dp'
-                                on_release: dropdown.select('Clock-Wise')
+                                on_release:
+                                    dropdown.select('Clock-Wise')
+                                    root.assign_rot('CW')
 
                             Button:
                                 text: 'Counter Clock-Wise'
                                 size_hint_y: None
                                 height: '48dp'
-                                on_release: dropdown.select('Counter Clock-Wise')
+                                on_release:
+                                    dropdown.select('Counter Clock-Wise')
+                                    root.assign_rot('CCW')
 
     AnchorLayout:
         anchor_x: 'right'

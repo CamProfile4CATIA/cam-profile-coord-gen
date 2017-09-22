@@ -14,9 +14,13 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="475">
+              <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+              <folding>
+                <element signature="e#13#28#0" expanded="false" />
+                <element signature="e#654#949#0" expanded="false" />
+                <element signature="e#1129#1694#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -24,18 +28,18 @@
       <file leaf-file-name="CPCG.kv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CPCG.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="112" column="21" lean-forward="false" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
+            <state relative-caret-position="51">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
-                <marker date="1506019337742" expanded="true" signature="107:3559" ph="..." />
-                <marker date="1506019337742" expanded="true" signature="165:3550" ph="..." />
-                <marker date="1506019337742" expanded="true" signature="3590:3669" ph="..." />
-                <marker date="1506019337742" expanded="false" signature="3703:3777" ph="..." />
-                <marker date="1506019337742" expanded="false" signature="3817:5905" ph="..." />
-                <marker date="1506019337742" expanded="true" signature="5928:6570" ph="..." />
-                <marker date="1506019337742" expanded="true" signature="5928:7230" ph="..." />
-                <marker date="1506019337742" expanded="true" signature="7251:8630" ph="..." />
-                <marker date="1506019337742" expanded="true" signature="8651:8990" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="107:3619" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="165:3610" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="3650:3729" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="3763:3837" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="3877:6391" ph="..." />
+                <marker date="1506060719692" expanded="true" signature="6414:7056" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="6414:7716" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="7737:9116" ph="..." />
+                <marker date="1506060719692" expanded="false" signature="9137:9476" ph="..." />
               </folding>
             </state>
           </provider>
@@ -44,7 +48,7 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-540">
+            <state relative-caret-position="13379">
               <caret line="801" column="0" lean-forward="false" selection-start-line="801" selection-start-column="0" selection-end-line="801" selection-end-column="0" />
               <folding />
             </state>
@@ -54,7 +58,7 @@
       <file leaf-file-name="layout.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/uix/layout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
+            <state relative-caret-position="1241">
               <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
               <folding />
             </state>
@@ -64,7 +68,7 @@
       <file leaf-file-name="gridlayout.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/uix/gridlayout.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="8517">
               <caret line="506" column="0" lean-forward="false" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
               <folding />
             </state>
@@ -74,8 +78,8 @@
       <file leaf-file-name="builder.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/lang/builder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,7 +88,7 @@
       <file leaf-file-name="widget.py" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/uix/widget.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
+            <state relative-caret-position="5627">
               <caret line="344" column="0" lean-forward="false" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
               <folding />
             </state>
@@ -95,16 +99,6 @@
         <entry file="file://$PROJECT_DIR$/globcamtest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fruit.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fruit.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-746">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -220,6 +214,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Python Ver" type="cbb8eebc:String" user="Python Ver" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,77 +242,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Python Ver" type="cbb8eebc:String" user="Python Ver" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="Navaneet" type="cbb8eebc:String" user="Navaneet" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="Navaneet" type="cbb8eebc:String" user="Navaneet" />
-              <item name=".PyCharmCE2017.2" type="cbb8eebc:String" user=".PyCharmCE2017.2" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="Navaneet" type="cbb8eebc:String" user="Navaneet" />
-              <item name=".PyCharmCE2017.2" type="cbb8eebc:String" user=".PyCharmCE2017.2" />
-              <item name="system" type="cbb8eebc:String" user="system" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="Navaneet" type="cbb8eebc:String" user="Navaneet" />
-              <item name=".PyCharmCE2017.2" type="cbb8eebc:String" user=".PyCharmCE2017.2" />
-              <item name="system" type="cbb8eebc:String" user="system" />
-              <item name="python_stubs" type="cbb8eebc:String" user="python_stubs" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="External Dependencies" type="cbb8eebc:String" user="External Dependencies" />
-              <item name="C:" type="cbb8eebc:String" user="C:" />
-              <item name="Users" type="cbb8eebc:String" user="Users" />
-              <item name="Navaneet" type="cbb8eebc:String" user="Navaneet" />
-              <item name=".PyCharmCE2017.2" type="cbb8eebc:String" user=".PyCharmCE2017.2" />
-              <item name="system" type="cbb8eebc:String" user="system" />
-              <item name="python_stubs" type="cbb8eebc:String" user="python_stubs" />
-              <item name="-114856694" type="cbb8eebc:String" user="-114856694" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,13 +387,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20678686" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33150384" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24456522" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24456522" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3326087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -514,6 +449,11 @@
           <line>3</line>
           <option name="timeStamp" value="36" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>79</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -522,7 +462,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="48" />
+      <option name="time" value="52" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -531,7 +471,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="15" selection-end-line="32" selection-end-column="25" />
-          <folding />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#654#949#0" expanded="false" />
+            <element signature="e#1129#1694#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -540,15 +484,15 @@
         <state relative-caret-position="748">
           <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
           <folding>
-            <marker date="1506019337742" expanded="true" signature="107:3559" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="165:3550" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="3590:3669" ph="..." />
-            <marker date="1506019337742" expanded="false" signature="3703:3777" ph="..." />
-            <marker date="1506019337742" expanded="false" signature="3817:5905" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="5928:6570" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="5928:7230" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="7251:8630" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="8651:8990" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="107:3619" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="165:3610" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="3650:3729" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="3763:3837" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="3877:6391" ph="..." />
+            <marker date="1506060719692" expanded="true" signature="6414:7056" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="6414:7716" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="7737:9116" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="9137:9476" ph="..." />
           </folding>
         </state>
       </provider>
@@ -670,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="1025" column="0" lean-forward="false" selection-start-line="1025" selection-start-column="0" selection-end-line="1025" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/site-packages/kivy/uix/behaviors/button.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -724,7 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -826,7 +762,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fruit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-746">
+        <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -834,7 +770,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/uix/widget.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
+        <state relative-caret-position="5627">
           <caret line="344" column="0" lean-forward="false" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
           <folding />
         </state>
@@ -842,7 +778,7 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/uix/layout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
+        <state relative-caret-position="1241">
           <caret line="75" column="0" lean-forward="false" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding />
         </state>
@@ -868,50 +804,62 @@
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/uix/gridlayout.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
+        <state relative-caret-position="8517">
           <caret line="506" column="0" lean-forward="false" selection-start-line="506" selection-start-column="0" selection-end-line="506" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/lang/builder.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
+        <state relative-caret-position="13379">
           <caret line="801" column="0" lean-forward="false" selection-start-line="801" selection-start-column="0" selection-end-line="801" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python35/Lib/site-packages/kivy/lang/builder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="72" column="0" lean-forward="false" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="1598" column="0" lean-forward="false" selection-start-line="1598" selection-start-column="0" selection-end-line="1598" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="475">
+          <caret line="98" column="8" lean-forward="false" selection-start-line="98" selection-start-column="8" selection-end-line="98" selection-end-column="8" />
+          <folding>
+            <element signature="e#13#28#0" expanded="false" />
+            <element signature="e#654#949#0" expanded="false" />
+            <element signature="e#1129#1694#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CPCG.kv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="112" column="21" lean-forward="false" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="21" />
+        <state relative-caret-position="51">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <marker date="1506019337742" expanded="true" signature="107:3559" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="165:3550" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="3590:3669" ph="..." />
-            <marker date="1506019337742" expanded="false" signature="3703:3777" ph="..." />
-            <marker date="1506019337742" expanded="false" signature="3817:5905" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="5928:6570" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="5928:7230" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="7251:8630" ph="..." />
-            <marker date="1506019337742" expanded="true" signature="8651:8990" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="107:3619" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="165:3610" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="3650:3729" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="3763:3837" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="3877:6391" ph="..." />
+            <marker date="1506060719692" expanded="true" signature="6414:7056" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="6414:7716" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="7737:9116" ph="..." />
+            <marker date="1506060719692" expanded="false" signature="9137:9476" ph="..." />
           </folding>
         </state>
       </provider>

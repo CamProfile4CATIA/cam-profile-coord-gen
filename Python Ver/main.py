@@ -33,14 +33,14 @@ class MyCam(object):
         self.rotationSense = rot
 
     def set_radius(self,rad):
-        self.rotationSense = rad
+        self.radius = rad
 
-    def set_radius(self,array):
+    def set_SeqArray(self,array):
         self.seqArray=array
 
 global Cam
 Cam = MyCam()
-Cam.set_rotationSense('CW')
+
 
 global SeqArray
 SeqArray=np.array([['first', 0, 0, 0],
@@ -75,12 +75,28 @@ class MainWidget(GridLayout):
 
 #region Screen Classes
 class PrelimScreen(Screen):
-#Ask for rotatin  sense and radius
-    pass
+    def assign_rad(self,rad):
+        global Cam
+        Cam.set_radius(rad)
+        print (Cam.radius)
+
+
+
+    def assign_rot(self,rot_sens):
+        global Cam
+        Cam.set_rotationSense(rot_sens)
+        print (Cam.rotationSense)
+
+    def update_padding(self, text_input, *args):
+        text_width = text_input._get_text_width(
+            text_input.text,
+            text_input.tab_width,
+            text_input._label_cached
+        )
+        text_input.padding_x = (text_input.width - text_width)/2
 
 class MainScreen(Screen):
-    def feed(self,instance):
-        print ('He')
+    pass
 
 
 class PostScreen(Screen):
