@@ -267,6 +267,7 @@ ScrMgt:
             on_release:
                 root.manager.transition = SlideTransition(direction="left")
                 app.root.current = 'PostScreen'
+                root.assign_SeqArray()
             text: '            Next'
 
     AnchorLayout:

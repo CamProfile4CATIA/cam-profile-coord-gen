@@ -2,6 +2,7 @@ import kivy
 
 #region Imports
 
+from MyCam import MyCam
 import numpy as np
 kivy.require("1.9.0")
 from kivy.uix.stacklayout import StackLayout
@@ -23,32 +24,12 @@ from kivy.uix.widget import Widget
 
 
 
-class MyCam(object):
-    def __init__(self):
-        self.rotationSense= None
-        self.radius=None
-        self.seqArray=None
-
-    def set_rotationSense(self,rot):
-        self.rotationSense = rot
-
-    def set_radius(self,rad):
-        self.radius = rad
-
-    def set_SeqArray(self,array):
-        self.seqArray=array
-
 global Cam
 Cam = MyCam()
-
 
 global SeqArray
 SeqArray=np.array([['first', 0, 0, 0],
 [0, 0, 0,0]])
-
-
-
-
 
 class CustomDropDown(BoxLayout):
     pass
@@ -72,15 +53,12 @@ class MainWidget(GridLayout):
         )
         text_input.padding_x = (text_input.width - text_width)/2
 
-
 #region Screen Classes
 class PrelimScreen(Screen):
     def assign_rad(self,rad):
         global Cam
         Cam.set_radius(rad)
         print (Cam.radius)
-
-
 
     def assign_rot(self,rot_sens):
         global Cam
@@ -96,8 +74,11 @@ class PrelimScreen(Screen):
         text_input.padding_x = (text_input.width - text_width)/2
 
 class MainScreen(Screen):
-    pass
-
+    def assign_SeqArray(self):
+        global Cam
+        global SeqArray
+        Cam.set_SeqArray(SeqArray)
+        print (Cam.seqArray)
 
 class PostScreen(Screen):
 #Ask for Output file location
@@ -133,14 +114,9 @@ class MainWidgetWrapper(GridLayout):
         self.add_widget(self.btn)
         self.btn.bind(on_press=self.addonemore)
 
-
-
-
-
 class CPCGeApp(App):
     def build(self):
         return Builder.load_file("CPCG.kv")
-
 
 App = CPCGeApp()
 App.run()
