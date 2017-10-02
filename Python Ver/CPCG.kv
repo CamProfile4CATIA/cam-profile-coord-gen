@@ -327,8 +327,10 @@ ScrMgt:
 
         BotButton:
             on_release:
+                root.generate_cord()
                 root.manager.transition = SlideTransition(direction="left")
                 app.root.current = 'FinalScreen'
+
             text: '            Next'
 
 

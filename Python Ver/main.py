@@ -81,8 +81,11 @@ class MainScreen(Screen):
         print (Cam.seqArray)
 
 class PostScreen(Screen):
-#Ask for Output file location
-    pass
+    def generate_cord(self, *args):
+        global Cam
+        Cam.master_executor()
+        print ('Hi')
+        print (Cam.x)
 
 class FinalScreen(Screen):
 #Progress bar, furteher how to, credits profile plot
