@@ -3,8 +3,41 @@
 
 #region CustWidget StyleSheet
 
-<Label>:
-    font_size:20
+
+
+<SaveDialog>:
+    text_input: text_input
+    BoxLayout:
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            on_selection: text_input.text = self.selection and self.selection[0] or ''
+        Widget:
+            size_hint_y: 0.02
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 30
+            Label:
+                text: 'Filename:'
+                size_hint_x: 0.2
+            TextInput:
+                id: text_input
+
+                multiline: False
+        Widget:
+            size_hint_y: 0.02
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Save"
+                on_release: root.save(filechooser.path, text_input.text)
 
 <MainWidget>:
     btn1:btn1
@@ -145,6 +178,10 @@ ScrMgt:
 
 <PrelimScreen>:
     name: 'PrelimScreen'
+
+
+
+
     BoxLayout:
         orientation: 'vertical'
         padding: 10
@@ -233,12 +270,16 @@ ScrMgt:
             size_hint: 0.93, 0.5
             padding: 10, 10, 10, 0
             Label:
+                font_size: 20
                 text:'Action'
             Label:
+                font_size: 20
                 text:'Motion Type'
             Label:
+                font_size: 20
                 text:'Displacement'
             Label:
+                font_size: 20
                 text:'Degree'
 
 
@@ -315,6 +356,7 @@ ScrMgt:
                 Button:
                     text: 'Browse'
                     size_hint: 0.25, 0.95
+                    on_release: root.show_save()
 
 
 

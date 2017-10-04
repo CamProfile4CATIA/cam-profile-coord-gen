@@ -18,6 +18,8 @@ from kivy.uix.gridlayout import GridLayout
 from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.widget import Widget
+from kivy.uix.popup import Popup
+import os
 
 
 #endregion
@@ -80,12 +82,36 @@ class MainScreen(Screen):
         Cam.set_SeqArray(SeqArray)
         print (Cam.seqArray)
 
+class SaveDialog(FloatLayout):
+    save = ObjectProperty(None)
+    text_input = ObjectProperty(None)
+    cancel = ObjectProperty(None)
+
 class PostScreen(Screen):
     def generate_cord(self, *args):
         global Cam
         Cam.master_executor()
         print ('Hi')
         print (Cam.x)
+
+    def show_save(self):
+        content = SaveDialog(save=self.save, cancel=self.dismiss_popup)
+        self._popup = Popup(title="Save file", content=content,
+                            size_hint=(0.9, 0.9))
+        self._popup.open()
+
+    def save(self, path, filename):
+        with open(os.path.join(path, filename), 'w') as stream:
+            stream.write(self.text_input.text)
+
+        self.dismiss_popup()
+
+    loadfile = ObjectProperty(None)
+    savefile = ObjectProperty(None)
+    text_input = ObjectProperty(None)
+
+    def dismiss_popup(self):
+        self._popup.dismiss()
 
 class FinalScreen(Screen):
 #Progress bar, furteher how to, credits profile plot

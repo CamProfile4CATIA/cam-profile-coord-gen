@@ -37,6 +37,9 @@ class MyCam(object):
                 self.x.append(k * math.sin(math.radians(i)))
             self.y.append( k * math.cos(math.radians(i)))
         self.currentRadius=k
+        print(self.x)
+        print(self.y)
+
 
 
     def execute_UV(self,startangle, stopangle, displacement):
@@ -110,46 +113,32 @@ class MyCam(object):
         rows = int(myseqarray.size / 4)
         self.icorr=0
         startangle=0
+
+
+
         for i in range(1,rows):
+            stopangle = startangle + int(myseqarray[i - 1, 3])
 
             if myseqarray[i-1,0]=='Dwell':
-                stopangle = startangle + int(myseqarray[i-1, 3])
+
                 self.execute_dwell(startangle, stopangle)
-                startangle = stopangle;
+
             else:
+                if myseqarray[i - 1, 0] == 'Rise':
+                    displacement = int(myseqarray[i - 1, 2])
+                if myseqarray[i - 1, 0] == 'Fall':
+                    displacement = -int(myseqarray[i - 1, 2])
+
                 if myseqarray[i-1,1]=='UV':
-                    stopangle = startangle + int(myseqarray[i-1, 3])
-                    if myseqarray[i-1,0]=='Rise':
-                        displacement = int(myseqarray[i-1, 2])
-                    if myseqarray[i-1,0]=='Fall':
-                        displacement = -int(myseqarray[i-1, 2])
                     self.execute_UV(startangle, stopangle, displacement)
-                    startangle = stopangle
 
                 if myseqarray[i-1,1]=='SHM':
-                    stopangle = startangle + int(myseqarray[i-1, 3])
-                    if myseqarray[i-1,0]=='Rise':
-                        displacement = int(myseqarray[i-1, 2])
-                    if myseqarray[i-1,0]=='Fall':
-                        displacement = -int(myseqarray[i-1, 2])
                     self.execute_SHM(startangle, stopangle, displacement)
-                    print (self.x)
-                    startangle = stopangle
 
                 if myseqarray[i - 1, 1] == 'UARM':
-                    stopangle = startangle + int(myseqarray[i-1, 3])
-                    if myseqarray[i - 1, 0] == 'Rise':
-                        displacement = int(myseqarray[i-1, 2])
-                    if myseqarray[i - 1, 0] == 'Fall':
-                        displacement = -int(myseqarray[i-1, 2])
                     self.execute_UARM(startangle, stopangle, displacement)
-                    startangle = stopangle
 
                 if myseqarray[i - 1, 1] == 'CYCLOIDAL':
-                    stopangle = startangle + int(myseqarray[i-1, 3])
-                    if myseqarray[i - 1, 0] == 'Rise':
-                        displacement = int(myseqarray[i-1, 2])
-                    if myseqarray[i - 1, 0] == 'Fall':
-                        displacement = -int(myseqarray[i-1, 2])
                     self.execute_SHM(startangle, stopangle, displacement)
-                    startangle = stopangle
+
+            startangle = stopangle
