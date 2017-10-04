@@ -72,6 +72,7 @@
                     on_release:
                         dropdown1.select('Rise')
                         root.feed(root.id[7:],1,self.text)
+                        depth.disabled= False
 
 
                 Button:
@@ -81,6 +82,8 @@
                     on_release:
                         dropdown1.select('Dwell')
                         root.feed(root.id[7:],1,self.text)
+                        depth.text= '0'
+                        depth.disabled= True
 
 
                 Button:
@@ -90,6 +93,7 @@
                     on_release:
                         dropdown1.select('Fall')
                         root.feed(root.id[7:],1,self.text)
+                        depth.disabled= False
 
 
     CustomDropDown:

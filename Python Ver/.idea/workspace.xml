@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+            <state relative-caret-position="-301">
+              <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
               <folding>
                 <element signature="e#829#833#0" expanded="false" />
                 <element signature="e#869#1433#0" expanded="false" />
@@ -32,21 +32,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CPCG.kv" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CPCG.kv" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CPCG.kv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4437">
-              <caret line="281" column="29" lean-forward="false" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
+            <state relative-caret-position="289">
+              <caret line="95" column="45" lean-forward="false" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
               <folding>
-                <marker date="1507113596043" expanded="true" signature="107:4513" ph="..." />
-                <marker date="1507113596043" expanded="true" signature="1059:4504" ph="..." />
-                <marker date="1507113596043" expanded="false" signature="4544:4623" ph="..." />
-                <marker date="1507113596043" expanded="false" signature="4657:4731" ph="..." />
-                <marker date="1507113596043" expanded="true" signature="4771:7289" ph="..." />
-                <marker date="1507113596043" expanded="true" signature="7312:8074" ph="..." />
-                <marker date="1507113596043" expanded="true" signature="7312:8773" ph="..." />
-                <marker date="1507113596043" expanded="true" signature="8794:10260" ph="..." />
-                <marker date="1507113596043" expanded="false" signature="10281:10620" ph="..." />
+                <marker date="1507114149982" expanded="true" signature="107:4690" ph="..." />
+                <marker date="1507114149982" expanded="true" signature="1059:4681" ph="..." />
+                <marker date="1507114149982" expanded="false" signature="4721:4800" ph="..." />
+                <marker date="1507114149982" expanded="false" signature="4834:4908" ph="..." />
+                <marker date="1507114149982" expanded="true" signature="4948:7466" ph="..." />
+                <marker date="1507114149982" expanded="true" signature="7489:8251" ph="..." />
+                <marker date="1507114149982" expanded="true" signature="7489:8950" ph="..." />
+                <marker date="1507114149982" expanded="true" signature="8971:10437" ph="..." />
+                <marker date="1507114149982" expanded="false" signature="10458:10797" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,7 +75,7 @@
       <file leaf-file-name="MyCam.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MyCam.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
+            <state relative-caret-position="2006">
               <caret line="119" column="62" lean-forward="false" selection-start-line="119" selection-start-column="62" selection-end-line="119" selection-end-column="62" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
@@ -87,7 +87,7 @@
       <file leaf-file-name="test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
+            <state relative-caret-position="221">
               <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -201,8 +201,8 @@
         <option value="$PROJECT_DIR$/file chooser ex" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/MyCam.py" />
-        <option value="$PROJECT_DIR$/CPCG.kv" />
         <option value="$PROJECT_DIR$/main.py" />
+        <option value="$PROJECT_DIR$/CPCG.kv" />
       </list>
     </option>
   </component>
@@ -243,6 +243,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Python Ver" type="cbb8eebc:String" user="Python Ver" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -259,18 +271,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="Python Ver" type="cbb8eebc:String" user="Python Ver" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -416,13 +416,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20678686" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33150384" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24565217" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24565217" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3326087" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -743,7 +744,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2958">
           <caret line="178" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +781,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/MyCam.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
+        <state relative-caret-position="2006">
           <caret line="119" column="62" lean-forward="false" selection-start-line="119" selection-start-column="62" selection-end-line="119" selection-end-column="62" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
@@ -791,7 +791,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="221">
           <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="21" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
@@ -807,24 +807,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CPCG.kv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4437">
-          <caret line="281" column="29" lean-forward="false" selection-start-line="281" selection-start-column="29" selection-end-line="281" selection-end-column="29" />
-          <folding>
-            <marker date="1507113596043" expanded="true" signature="107:4513" ph="..." />
-            <marker date="1507113596043" expanded="true" signature="1059:4504" ph="..." />
-            <marker date="1507113596043" expanded="false" signature="4544:4623" ph="..." />
-            <marker date="1507113596043" expanded="false" signature="4657:4731" ph="..." />
-            <marker date="1507113596043" expanded="true" signature="4771:7289" ph="..." />
-            <marker date="1507113596043" expanded="true" signature="7312:8074" ph="..." />
-            <marker date="1507113596043" expanded="true" signature="7312:8773" ph="..." />
-            <marker date="1507113596043" expanded="true" signature="8794:10260" ph="..." />
-            <marker date="1507113596043" expanded="false" signature="10281:10620" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/file chooser ex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -835,8 +817,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        <state relative-caret-position="-301">
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
           <folding>
             <element signature="e#829#833#0" expanded="false" />
             <element signature="e#869#1433#0" expanded="false" />
@@ -848,6 +830,24 @@
             <element signature="e#2323#3034#0" expanded="false" />
             <element signature="e#3063#3124#0" expanded="false" />
             <element signature="e#3219#4000#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CPCG.kv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="95" column="45" lean-forward="false" selection-start-line="95" selection-start-column="45" selection-end-line="95" selection-end-column="45" />
+          <folding>
+            <marker date="1507114149982" expanded="true" signature="107:4690" ph="..." />
+            <marker date="1507114149982" expanded="true" signature="1059:4681" ph="..." />
+            <marker date="1507114149982" expanded="false" signature="4721:4800" ph="..." />
+            <marker date="1507114149982" expanded="false" signature="4834:4908" ph="..." />
+            <marker date="1507114149982" expanded="true" signature="4948:7466" ph="..." />
+            <marker date="1507114149982" expanded="true" signature="7489:8251" ph="..." />
+            <marker date="1507114149982" expanded="true" signature="7489:8950" ph="..." />
+            <marker date="1507114149982" expanded="true" signature="8971:10437" ph="..." />
+            <marker date="1507114149982" expanded="false" signature="10458:10797" ph="..." />
           </folding>
         </state>
       </provider>
