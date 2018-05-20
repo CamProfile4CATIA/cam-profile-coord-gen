@@ -22,9 +22,15 @@ from kivy.uix.popup import Popup
 import xlsxwriter
 from kivy.uix.progressbar import ProgressBar
 import os
+import tkinter as tk
+from tkinter import filedialog
 
 
 #endregion
+
+
+application_window = tk.Tk()
+application_window.withdraw()
 
 
 
@@ -95,7 +101,7 @@ class PostScreen(Screen):
         global Cam
         Cam.master_executor()
         if Cam.op_file_format == 'txt':
-            with open(os.path.join(Cam.path, Cam.filename+'.'+Cam.op_file_format), 'w') as stream:
+            with open(os.path.join(Cam.path), 'w') as stream:
                 npoints = len(Cam.x)
 
                 for i in range(npoints):
@@ -107,7 +113,7 @@ class PostScreen(Screen):
                     stream.write('\n')
 
         if Cam.op_file_format == 'xlsx':
-            workbook = xlsxwriter.Workbook(Cam.path+Cam.filename+'.'+Cam.op_file_format)
+            workbook = xlsxwriter.Workbook(Cam.path)
             worksheet = workbook.add_worksheet("coordinates")
             npoints = len(Cam.x)
 
@@ -120,21 +126,21 @@ class PostScreen(Screen):
 
 
     def show_save(self):
-        content = SaveDialog(save=self.save, cancel=self.dismiss_popup)
-        self._popup = Popup(title="Save file", content=content,
-                            size_hint=(0.9, 0.9))
-        self._popup.open()
-
-    def save(self, path, filename):
-#        print(filename)
+        options = {}
         global Cam
-        Cam.path=path
-        Cam.filename=filename
+        if Cam.op_file_format=='txt':
+            options['defaultextension'] = 'txt'
+            options['filetypes'] = [('text files', '.txt')]
+        if Cam.op_file_format=='xlsx':
+            options['defaultextension'] = 'xlsx'
+            options['filetypes'] = [('excel files', '.xlsx')]
 
-#        with open(os.path.join(path, filename), 'w') as stream:
-#           stream.write(self.text_input.text)
+        options['initialdir'] = None
+        options['initialfile'] = None
+        options['title'] = None
+        Cam.path= str(filedialog.asksaveasfilename(**options))
+        print(Cam.path)
 
-        self.dismiss_popup()
 
     def checkbox_txt_selected(self,instance,value):
         if value is True:
@@ -152,8 +158,7 @@ class PostScreen(Screen):
     savefile = ObjectProperty(None)
     text_input = ObjectProperty(None)
 
-    def dismiss_popup(self):
-        self._popup.dismiss()
+
 
 class FinalScreen(Screen):
 #Progress bar, furteher how to, credits profile plot

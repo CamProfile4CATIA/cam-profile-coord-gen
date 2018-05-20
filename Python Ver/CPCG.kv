@@ -344,48 +344,20 @@ ScrMgt:
                 Label:
                     id: loc
                     font_size: 32
-                    text:'Select Destination'
-                    font_size: 32
-
-
-        RelativeLayout:
-            size_hint: 1, 0.5
-            BoxLayout:
-
-                pos_hint: {'center_x': 0.5, 'center_y': 2}
-                orientation: 'vertical'
-
-
-                BoxLayout:
-                    size_hint: 0.2, 0.3
-                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
-                    Button:
-                        size_hint: 0.2, 0.6
-                        text: 'Browse'
-                        on_release: root.show_save()
-
-        RelativeLayout:
-
-            BoxLayout:
-                size_hint: 0.7, 0.18
-                pos_hint: {'center_x': 0.5, 'center_y': 1.15}
-
-
-                Label:
-                    id: loc
-                    font_size: 32
                     text:'Select File Type'
                     font_size: 32
 
+
+
         RelativeLayout:
             size_hint: 1, 0.5
             BoxLayout:
 
-                pos_hint: {'center_x': 0.5, 'center_y': 2}
+                pos_hint: { 'center_y': 1.4}
                 orientation: 'vertical'
 
                 BoxLayout:
-                    pos_hint: {'center_x': 0.5, 'center_y': 2}
+                    pos_hint: {'center_x': 0.5}
                     size_hint: 0.6, 1
 
                     BoxLayout:
@@ -399,8 +371,6 @@ ScrMgt:
                         Label:
                             text: '.txt'
 
-
-
                     BoxLayout:
 
                     BoxLayout:
@@ -411,8 +381,31 @@ ScrMgt:
                         Label:
                             text: '.xlsx'
 
-
                     BoxLayout:
+
+
+        RelativeLayout:
+            size_hint: 1, 1.4
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 1.15}
+
+
+                Label:
+                    font_size: 32
+                    text:'Select Destination'
+                    font_size: 32
+
+            BoxLayout:
+                size_hint: 0.2, 0.3
+                pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+                Button:
+                    size_hint: 0.2, 0.6
+                    text: 'Browse'
+                    on_release: root.show_save()
 
 
 
