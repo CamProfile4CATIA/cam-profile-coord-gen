@@ -338,7 +338,8 @@ ScrMgt:
 
             BoxLayout:
                 size_hint: 0.7, 0.18
-                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+                pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+
 
                 Label:
                     id: loc
@@ -346,21 +347,72 @@ ScrMgt:
                     text:'Select Destination'
                     font_size: 32
 
+
+        RelativeLayout:
+            size_hint: 1, 0.5
+            BoxLayout:
+
+                pos_hint: {'center_x': 0.5, 'center_y': 2}
+                orientation: 'vertical'
+
+
+                BoxLayout:
+                    size_hint: 0.2, 0.3
+                    pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+                    Button:
+                        size_hint: 0.2, 0.6
+                        text: 'Browse'
+                        on_release: root.show_save()
+
         RelativeLayout:
 
             BoxLayout:
-                size_hint: 0.7, 0.13
-                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 1.15}
 
-                TextInput:
+
+                Label:
                     id: loc
-                    font_size: 24
+                    font_size: 32
+                    text:'Select File Type'
+                    font_size: 32
+
+        RelativeLayout:
+            size_hint: 1, 0.5
+            BoxLayout:
+
+                pos_hint: {'center_x': 0.5, 'center_y': 2}
+                orientation: 'vertical'
+
+                BoxLayout:
+                    pos_hint: {'center_x': 0.5, 'center_y': 2}
+                    size_hint: 0.6, 1
+
+                    BoxLayout:
+
+                    BoxLayout:
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+                        CheckBox:
+                            group: "file type selection"
+                            active: True
+                            on_active: root.checkbox_txt_selected(self,self.active)
+                        Label:
+                            text: '.txt'
 
 
-                Button:
-                    text: 'Browse'
-                    size_hint: 0.25, 0.95
-                    on_release: root.show_save()
+
+                    BoxLayout:
+
+                    BoxLayout:
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+                        CheckBox:
+                            group: "file type selection"
+                            on_active: root.checkbox_xlsx_selected(self,self.active)
+                        Label:
+                            text: '.xlsx'
+
+
+                    BoxLayout:
 
 
 
@@ -373,9 +425,9 @@ ScrMgt:
 
         BotButton:
             on_release:
-                root.generate_cord()
                 root.manager.transition = SlideTransition(direction="left")
                 app.root.current = 'FinalScreen'
+                root.generate_cord()
 
             text: '            Next'
 
@@ -397,13 +449,12 @@ ScrMgt:
 
 
     AnchorLayout:
-        anchor_x: 'left'
+        anchor_x: 'center'
         anchor_y:'bottom'
         padding:10
 
         BotButton:
             on_release:
-                root.manager.transition = SlideTransition(direction="right")
-                app.root.current = 'PostScreen'
-            text: 'Prev                 '#end of final screen
+                app.stop()
+            text: '     Exit     '#end of final screen
 

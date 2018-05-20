@@ -19,6 +19,8 @@ from kivy.uix.screenmanager import ScreenManager, Screen, FadeTransition
 from kivy.uix.scrollview import ScrollView
 from kivy.uix.widget import Widget
 from kivy.uix.popup import Popup
+import xlsxwriter
+from kivy.uix.progressbar import ProgressBar
 import os
 
 
@@ -28,6 +30,7 @@ import os
 
 global Cam
 Cam = MyCam()
+Cam.op_file_format='txt'
 
 global SeqArray
 SeqArray=np.array([['first', 0, 0, 0],
@@ -45,7 +48,7 @@ class MainWidget(GridLayout):
             newrow=np.array(['first',0, 0, 0])
             SeqArray=np.vstack((SeqArray,newrow))
         SeqArray[(row-1),(col-1)]=data
-        print(SeqArray)
+#        print(SeqArray)
 
     def update_padding(self, text_input, *args):
         text_width = text_input._get_text_width(
@@ -60,12 +63,12 @@ class PrelimScreen(Screen):
     def assign_rad(self,rad):
         global Cam
         Cam.set_radius(rad)
-        print (Cam.radius)
+#        print (Cam.radius)
 
     def assign_rot(self,rot_sens):
         global Cam
         Cam.set_rotationSense(rot_sens)
-        print (Cam.rotationSense)
+#        print (Cam.rotationSense)
 
     def update_padding(self, text_input, *args):
         text_width = text_input._get_text_width(
@@ -80,7 +83,7 @@ class MainScreen(Screen):
         global Cam
         global SeqArray
         Cam.set_SeqArray(SeqArray)
-        print (Cam.seqArray)
+#        print (Cam.seqArray)
 
 class SaveDialog(FloatLayout):
     save = ObjectProperty(None)
@@ -91,8 +94,30 @@ class PostScreen(Screen):
     def generate_cord(self, *args):
         global Cam
         Cam.master_executor()
-        print ('Hi')
-        print (Cam.x)
+        if Cam.op_file_format == 'txt':
+            with open(os.path.join(Cam.path, Cam.filename+'.'+Cam.op_file_format), 'w') as stream:
+                npoints = len(Cam.x)
+
+                for i in range(npoints):
+                    xpoint=str(Cam.x[i])
+                    ypoint=str(Cam.y[i])
+                    stream.write(xpoint)
+                    stream.write(' ')
+                    stream.write(ypoint)
+                    stream.write('\n')
+
+        if Cam.op_file_format == 'xlsx':
+            workbook = xlsxwriter.Workbook(Cam.path+Cam.filename+'.'+Cam.op_file_format)
+            worksheet = workbook.add_worksheet("coordinates")
+            npoints = len(Cam.x)
+
+            for i in range(npoints):
+                xpoint = str(Cam.x[i])
+                ypoint = str(Cam.y[i])
+                col=0
+                worksheet.write(i, 0, xpoint)
+                worksheet.write(i, 1, ypoint)
+
 
     def show_save(self):
         content = SaveDialog(save=self.save, cancel=self.dismiss_popup)
@@ -101,10 +126,27 @@ class PostScreen(Screen):
         self._popup.open()
 
     def save(self, path, filename):
-        with open(os.path.join(path, filename), 'w') as stream:
-            stream.write(self.text_input.text)
+#        print(filename)
+        global Cam
+        Cam.path=path
+        Cam.filename=filename
+
+#        with open(os.path.join(path, filename), 'w') as stream:
+#           stream.write(self.text_input.text)
 
         self.dismiss_popup()
+
+    def checkbox_txt_selected(self,instance,value):
+        if value is True:
+            global Cam
+            Cam.op_file_format='txt'
+#            print("Hi")
+
+    def checkbox_xlsx_selected(self, instance, value):
+        if value is True:
+            global Cam
+            Cam.op_file_format = 'xlsx'
+#            print("Hello")
 
     loadfile = ObjectProperty(None)
     savefile = ObjectProperty(None)
@@ -116,6 +158,7 @@ class PostScreen(Screen):
 class FinalScreen(Screen):
 #Progress bar, furteher how to, credits profile plot
     pass
+
 
 class ScrMgt(ScreenManager):
     pass
@@ -134,7 +177,7 @@ class MainWidgetWrapper(GridLayout):
     def addonemore(self,instance):
         i = int(instance.id[10:])
         i+=1
-        print('The button <%s> is being pressed' % instance.id)
+#        print('The button <%s> is being pressed' % instance.id)
         fillerwidget = Widget(height='52dp', size_hint=(0.07, None))
         self.remove_widget(self.btn)
         self.add_widget(fillerwidget)

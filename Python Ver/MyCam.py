@@ -37,64 +37,63 @@ class MyCam(object):
                 self.x.append(k * math.sin(math.radians(i)))
             self.y.append( k * math.cos(math.radians(i)))
         self.currentRadius=k
-        print(self.x)
-        print(self.y)
+#        print(self.x)
+#        print(self.y)
 
 
 
     def execute_UV(self,startangle, stopangle, displacement):
-        k = self.currentRadius
+        k = float(self.currentRadius)
         for i in range(startangle+1,stopangle):
             deltatheta=i-startangle
             theta=startangle+deltatheta
             kdash = (displacement / (stopangle - startangle)) * deltatheta; #not checked
-            k = self.currentRadius + kdash
+            k = float(self.currentRadius) + kdash
             if self.rotationSense=='CW':
                 self.x.append(-k*math.sin(math.radians(i)))
             if self.rotationSense=='CCW':
                 self.x.append(k * math.sin(math.radians(i)))
             self.y.append( k * math.cos(math.radians(i)))
         self.currentRadius=k
-        print(self.x)
-        print(self.y)
+#        print(self.x)
+#        print(self.y)
 
     def execute_UARM(self,startangle, stopangle, displacement):
-        k = self.currentRadius
+        k = float(self.currentRadius)
         for i in range(startangle+1,stopangle):
             deltatheta=i-startangle
             theta=startangle+deltatheta
             if (deltatheta <= ((stopangle - startangle) / 2)):
-                kdash = 2 * displacement * (deltatheta / (stopangle - startangle)) ^ 2   #not checked
+                kdash = 2 * displacement * math.pow((deltatheta / (stopangle - startangle)), 2)   #not checked
             if (deltatheta > ((stopangle - startangle) / 2)):
-                kdash = displacement - 2 * displacement * (1 - (deltatheta / (stopangle - startangle))) ^ 2   #not checked
-            k = self.currentRadius + kdash
+                kdash = displacement - 2 * displacement * math.pow((1 - (deltatheta / (stopangle - startangle))), 2)   #not checked
+            k = float(self.currentRadius) + kdash
             if self.rotationSense=='CW':
                 self.x.append(-k*math.sin(math.radians(i)))
             if self.rotationSense=='CCW':
                 self.x.append(k * math.sin(math.radians(i)))
             self.y.append( k * math.cos(math.radians(i)))
         self.currentRadius=k
-        print(self.x)
-        print(self.y)
+#        print(self.x)
+#        print(self.y)
 
     def execute_cycloidal(self, startangle, stopangle, displacement):
-        k = self.currentRadius
+        k = float(self.currentRadius)
         for i in range(startangle + 1, stopangle):
             deltatheta = i - startangle
             theta = startangle + deltatheta
             kdash = (displacement / math.pi) * ((math.pi * i / (startangle - stopangle)) - (0.5 * math.sin(math.radians(360 * deltatheta / (startangle - stopangle)))))  #not checked
-            k = self.currentRadius + kdash
+            k = float(self.currentRadius) + kdash
             if self.rotationSense == 'CW':
                 self.x.append(-k * math.sin(math.radians(i)))
             if self.rotationSense == 'CCW':
                 self.x.append(k * math.sin(math.radians(i)))
             self.y.append(k * math.cos(math.radians(i)))
         self.currentRadius = k
-        print(self.x)
-        print(self.y)
 
-    def execute_dwell(self, startangle, stopangle, displacement):
-        k = self.currentRadius
+
+    def execute_dwell(self, startangle, stopangle):
+        k = float(self.currentRadius)
         for i in range(startangle + 1, stopangle):
             deltatheta = i - startangle
             theta = startangle + deltatheta
@@ -104,8 +103,8 @@ class MyCam(object):
                 self.x.append(k * math.sin(math.radians(i)))
             self.y.append(k * math.cos(math.radians(i)))
         self.currentRadius = k
-        print(self.x)
-        print(self.y)
+#        print(self.x)
+#        print(self.y)
 
     def master_executor(self):
 
@@ -140,5 +139,6 @@ class MyCam(object):
 
                 if myseqarray[i - 1, 1] == 'CYCLOIDAL':
                     self.execute_SHM(startangle, stopangle, displacement)
+
 
             startangle = stopangle
