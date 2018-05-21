@@ -37,10 +37,11 @@ application_window.withdraw()
 global Cam
 Cam = MyCam()
 Cam.op_file_format='txt'
+Cam.path='cord.txt'
 
 global SeqArray
-SeqArray=np.array([['first', 0, 0, 0],
-[0, 0, 0,0]])
+SeqArray=np.array([['dwell', 'SHM', 0, 0],
+['dwell', 'SHM', 0, 0]])
 
 class CustomDropDown(BoxLayout):
     pass
@@ -139,7 +140,7 @@ class PostScreen(Screen):
         options['initialfile'] = None
         options['title'] = None
         Cam.path= str(filedialog.asksaveasfilename(**options))
-        print(Cam.path)
+
 
 
     def checkbox_txt_selected(self,instance,value):

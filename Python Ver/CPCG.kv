@@ -439,6 +439,24 @@ ScrMgt:
 
 <FinalScreen>:
     name: 'FinalScreen'
+    BoxLayout:
+        size_hint: 0.4, 0.5
+        orientation: 'vertical'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.65}
+        Label:
+            text: 'Coordinates Generated!'
+            font_size:32
+        Label:
+            text: 'Further steps to import these into CATIA is explained in this youtube video:'
+            font_size: 20
+
+        BoxLayout:
+            size_hint: 0.68, 0.24
+            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+            TextInput:
+
+                text: ' https://youtu.be/nP_gErfA5IQ '
+
 
 
     AnchorLayout:
