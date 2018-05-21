@@ -26,7 +26,7 @@ class MyCam(object):
 
     def execute_SHM(self,startangle, stopangle, displacement):
         k = float(self.currentRadius)
-        for i in range(startangle+1,stopangle):
+        for i in range(startangle+1,stopangle+1):
             deltatheta=i-startangle
             theta=startangle+deltatheta
             kdash = (displacement / 2) * (1 - (math.cos(math.radians((180 / (stopangle - startangle)) * deltatheta))))
@@ -44,7 +44,7 @@ class MyCam(object):
 
     def execute_UV(self,startangle, stopangle, displacement):
         k = float(self.currentRadius)
-        for i in range(startangle+1,stopangle):
+        for i in range(startangle+1,stopangle+1):
             deltatheta=i-startangle
             theta=startangle+deltatheta
             kdash = (displacement / (stopangle - startangle)) * deltatheta; #not checked
@@ -60,7 +60,7 @@ class MyCam(object):
 
     def execute_UARM(self,startangle, stopangle, displacement):
         k = float(self.currentRadius)
-        for i in range(startangle+1,stopangle):
+        for i in range(startangle+1,stopangle+1):
             deltatheta=i-startangle
             theta=startangle+deltatheta
             if (deltatheta <= ((stopangle - startangle) / 2)):
@@ -79,7 +79,7 @@ class MyCam(object):
 
     def execute_cycloidal(self, startangle, stopangle, displacement):
         k = float(self.currentRadius)
-        for i in range(startangle + 1, stopangle):
+        for i in range(startangle + 1, stopangle+1):
             deltatheta = i - startangle
             theta = startangle + deltatheta
             kdash = (displacement / math.pi) * ((math.pi * i / (startangle - stopangle)) - (0.5 * math.sin(math.radians(360 * deltatheta / (startangle - stopangle)))))  #not checked
@@ -94,7 +94,7 @@ class MyCam(object):
 
     def execute_dwell(self, startangle, stopangle):
         k = float(self.currentRadius)
-        for i in range(startangle + 1, stopangle):
+        for i in range(startangle + 1, stopangle+1):
             deltatheta = i - startangle
             theta = startangle + deltatheta
             if self.rotationSense == 'CW':
@@ -115,7 +115,7 @@ class MyCam(object):
 
 
 
-        for i in range(1,rows):
+        for i in range(1,rows+1):
             stopangle = startangle + int(myseqarray[i - 1, 3])
 
             if myseqarray[i-1,0]=='Dwell':
@@ -125,19 +125,19 @@ class MyCam(object):
             else:
                 if myseqarray[i - 1, 0] == 'Rise':
                     displacement = int(myseqarray[i - 1, 2])
-                if myseqarray[i - 1, 0] == 'Fall':
+                elif myseqarray[i - 1, 0] == 'Fall':
                     displacement = -int(myseqarray[i - 1, 2])
 
                 if myseqarray[i-1,1]=='UV':
                     self.execute_UV(startangle, stopangle, displacement)
 
-                if myseqarray[i-1,1]=='SHM':
+                elif myseqarray[i-1,1]=='SHM':
                     self.execute_SHM(startangle, stopangle, displacement)
 
-                if myseqarray[i - 1, 1] == 'UARM':
+                elif myseqarray[i - 1, 1] == 'UARM':
                     self.execute_UARM(startangle, stopangle, displacement)
 
-                if myseqarray[i - 1, 1] == 'CYCLOIDAL':
+                elif myseqarray[i - 1, 1] == 'CYCLO':
                     self.execute_SHM(startangle, stopangle, displacement)
 
 
