@@ -1,0 +1,474 @@
+#: import SlideTransition kivy.uix.screenmanager.SlideTransition
+#: import Window kivy.core.window.Window
+
+#region CustWidget StyleSheet
+
+
+
+<SaveDialog>:
+    text_input: text_input
+    BoxLayout:
+        pos: root.pos
+        orientation: "vertical"
+        FileChooserListView:
+            id: filechooser
+            on_selection: text_input.text = self.selection and self.selection[0] or ''
+        Widget:
+            size_hint_y: 0.02
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint_y: None
+            height: 30
+            Label:
+                text: 'Filename:'
+                size_hint_x: 0.2
+            TextInput:
+                id: text_input
+
+                multiline: False
+        Widget:
+            size_hint_y: 0.02
+        BoxLayout:
+            size_hint_y: None
+            height: 30
+            Button:
+                text: "Cancel"
+                on_release: root.cancel()
+
+            Button:
+                text: "Save"
+                on_release: root.save(filechooser.path, text_input.text)
+
+<MainWidget>:
+    btn1:btn1
+    btn2:btn2
+    depth:depth
+    angle:angle
+    row_default_height: '50dp'
+    row_force_default: True
+    cols:4
+    size_hint: 0.93, 0.18
+
+    CustomDropDown:
+        Button:
+            id:btn1
+            text: 'Select'
+            on_release: dropdown1.open(self)
+            size_hint_y: None
+            height: '48dp'
+
+            Widget:
+                on_parent: dropdown1.dismiss()
+
+            DropDown:
+
+                id: dropdown1
+                on_select: btn1.text = '{}'.format(args[1])
+
+                Button:
+                    text: 'Rise'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown1.select('Rise')
+                        root.feed(root.id[7:],1,self.text)
+                        depth.disabled= False
+
+
+                Button:
+                    text: 'Dwell'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown1.select('Dwell')
+                        root.feed(root.id[7:],1,self.text)
+                        depth.text= '0'
+                        depth.disabled= True
+
+
+                Button:
+                    text: 'Fall'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown1.select('Fall')
+                        root.feed(root.id[7:],1,self.text)
+                        depth.disabled= False
+
+
+    CustomDropDown:
+        Button:
+            id:btn2
+            text: 'Select'
+            on_release: dropdown2.open(self)
+            size_hint_y: None
+            height: '48dp'
+
+            Widget:
+                on_parent: dropdown2.dismiss()
+
+            DropDown:
+
+                id: dropdown2
+                on_select: btn2.text = '{}'.format(args[1])
+
+                Button:
+                    text: 'SHM'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown2.select('SHM')
+                        root.feed(root.id[7:],2,self.text)
+
+                Button:
+                    text: 'UARM'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown2.select('UARM')
+                        root.feed(root.id[7:],2,self.text)
+
+                Button:
+                    text: 'CYCLOIDAL'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown2.select('CYCLOIDAL')
+                        root.feed(root.id[7:],2,self.text)
+
+
+                Button:
+                    text: 'UV'
+                    size_hint_y: None
+                    height: '48dp'
+                    on_release:
+                        dropdown2.select('UV')
+                        root.feed(root.id[7:],2,self.text)
+
+    TextInput:
+        id:depth
+        font_size: 20
+        multiline: False
+        padding_y: (self.height-self.font_size)/2
+        padding_x: self.width/2 # initial padding
+        input_filter: 'float'
+        on_text:
+            root.feed(root.id[7:],3,self.text)
+            root.update_padding(args[0])
+
+    TextInput:
+        id:angle
+        font_size: 20
+        multiline: False
+        padding_y: (self.height-self.font_size)/2
+        padding_x: self.width/2 # initial padding
+        input_filter: 'float'
+        on_text:
+            root.feed(root.id[7:],4,self.text)
+            root.update_padding(args[0])
+
+#endregion#end of MainWidget StyleSheet
+
+<BotButton@Button>:
+    size_hint_y: 0.1
+    size_hint_x: 0.5
+    font_size: 30#end of Bottom Button Stylesheet
+
+ScrMgt:
+    PrelimScreen:
+    MainScreen:
+    PostScreen:
+    FinalScreen:#end of screen mgt screens decleration
+
+<PrelimScreen>:
+    name: 'PrelimScreen'
+
+
+
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        RelativeLayout:
+
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 0.4}
+
+                Label:
+                    text: "Radius (m):"
+                    font_size: 32
+
+                TextInput:
+                    id:radius
+                    font_size: 32
+                    multiline: False
+                    padding_x: self.width/2 # initial padding
+                    input_filter: 'float'
+                    on_text:
+                        root.update_padding(args[0])
+                        root.assign_rad(self.text)
+
+
+        RelativeLayout:
+
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 0.9}
+
+                Label:
+                    text: "Rotation Sense:"
+                    font_size: 32
+
+                CustomDropDown:
+                    Button:
+                        id: btn
+                        text: 'Select'
+                        on_release: dropdown.open(self)
+                        size_hint_y: None
+                        height: '48dp'
+
+                        Widget:
+                            on_parent: dropdown.dismiss()
+
+                        DropDown:
+
+                            id: dropdown
+                            on_select: btn.text = '{}'.format(args[1])
+
+                            Button:
+                                text: 'Clock-Wise'
+                                size_hint_y: None
+                                height: '48dp'
+                                on_release:
+                                    dropdown.select('Clock-Wise')
+                                    root.assign_rot('CW')
+
+                            Button:
+                                text: 'Counter Clock-Wise'
+                                size_hint_y: None
+                                height: '48dp'
+                                on_release:
+                                    dropdown.select('Counter Clock-Wise')
+                                    root.assign_rot('CCW')
+
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="left")
+                app.root.current = 'MainScreen'
+            text: '            Next'#end of prelim screen
+
+<MainScreen>:
+    name: 'MainScreen'
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            orientation: 'horizontal'
+            size_hint: 0.93, 0.5
+            padding: 10, 10, 10, 0
+            Label:
+                font_size: 20
+                text:'Action'
+            Label:
+                font_size: 20
+                text:'Motion Type'
+            Label:
+                font_size: 20
+                text:'Displacement'
+            Label:
+                font_size: 20
+                text:'Degree'
+
+
+        ScrollView:
+            size_hint: (1,None)
+            size: (Window.width, Window.height*0.79)
+
+
+
+            MainWidgetWrapper:
+                cols: 2
+                padding: 10
+                size_hint_y: None
+                height: self.minimum_height
+
+
+        Widget:
+
+
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="left")
+                app.root.current = 'PostScreen'
+                root.assign_SeqArray()
+            text: '            Next'
+
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="right")
+                app.root.current = 'PrelimScreen'
+            text: 'Prev                 '#end of main screen
+
+<PostScreen>:
+    name: 'PostScreen'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        RelativeLayout:
+
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+
+
+                Label:
+                    id: loc
+                    font_size: 32
+                    text:'Select File Type'
+                    font_size: 32
+
+
+
+        RelativeLayout:
+            size_hint: 1, 0.5
+            BoxLayout:
+
+                pos_hint: { 'center_y': 1.4}
+                orientation: 'vertical'
+
+                BoxLayout:
+                    pos_hint: {'center_x': 0.5}
+                    size_hint: 0.6, 1
+
+                    BoxLayout:
+
+                    BoxLayout:
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+                        CheckBox:
+                            group: "file type selection"
+                            active: True
+                            on_active: root.checkbox_txt_selected(self,self.active)
+                        Label:
+                            text: '.txt'
+
+                    BoxLayout:
+
+                    BoxLayout:
+                        pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+                        CheckBox:
+                            group: "file type selection"
+                            on_active: root.checkbox_xlsx_selected(self,self.active)
+                        Label:
+                            text: '.xlsx'
+
+                    BoxLayout:
+
+
+        RelativeLayout:
+            size_hint: 1, 1.4
+            pos_hint: {'center_x': 0.5, 'center_y': 0.5}
+
+
+            BoxLayout:
+                size_hint: 0.7, 0.18
+                pos_hint: {'center_x': 0.5, 'center_y': 1.15}
+
+
+                Label:
+                    font_size: 32
+                    text:'Select Destination'
+                    font_size: 32
+
+            BoxLayout:
+                size_hint: 0.2, 0.3
+                pos_hint: {'center_x': 0.5, 'center_y': 0.8}
+                Button:
+                    size_hint: 0.2, 0.6
+                    text: 'Browse'
+                    on_release: root.show_save()
+
+
+    AnchorLayout:
+        anchor_x: 'right'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="left")
+                app.root.current = 'FinalScreen'
+                root.generate_cord()
+
+            text: '            Next'
+
+
+
+    AnchorLayout:
+        anchor_x: 'left'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                root.manager.transition = SlideTransition(direction="right")
+                app.root.current = 'MainScreen'
+            text: 'Prev                 '#end of post screen
+
+<FinalScreen>:
+    name: 'FinalScreen'
+    BoxLayout:
+        size_hint: 0.4, 0.5
+        orientation: 'vertical'
+        pos_hint: {'center_x': 0.5, 'center_y': 0.65}
+        Label:
+            text: 'Coordinates Generated!'
+            font_size:32
+        Label:
+            text: 'Further steps to import these into CATIA is explained in this youtube video:'
+            font_size: 20
+
+        BoxLayout:
+            size_hint: 0.68, 0.24
+            pos_hint: {'center_x': 0.5, 'center_y':0.5}
+            TextInput:
+                text: ' https://youtu.be/nP_gErfA5IQ '
+
+    RelativeLayout:
+        pos_hint: {'center_x': 0.85, 'center_y': 0.2}
+        padding:10
+
+        Label:
+            text: '~Prabin | Navaneet'
+            font_size: 20
+
+
+    AnchorLayout:
+        anchor_x: 'center'
+        anchor_y:'bottom'
+        padding:10
+
+        BotButton:
+            on_release:
+                app.stop()
+            text: '     Exit     '#end of final screen
+
