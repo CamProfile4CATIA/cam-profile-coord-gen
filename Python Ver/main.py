@@ -192,9 +192,9 @@ class MainWidgetWrapper(GridLayout):
         self.add_widget(self.btn)
         self.btn.bind(on_press=self.addonemore)
 
-class CPCGeApp(App):
+class CPCGApp(App):
     def build(self):
         return Builder.load_file("CPCG.kv")
 
-App = CPCGeApp()
+App = CPCGApp()
 App.run()
