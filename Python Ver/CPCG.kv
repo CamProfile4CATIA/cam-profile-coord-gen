@@ -408,9 +408,6 @@ ScrMgt:
                     on_release: root.show_save()
 
 
-
-
-
     AnchorLayout:
         anchor_x: 'right'
         anchor_y:'bottom'
@@ -454,9 +451,15 @@ ScrMgt:
             size_hint: 0.68, 0.24
             pos_hint: {'center_x': 0.5, 'center_y':0.5}
             TextInput:
-
                 text: ' https://youtu.be/nP_gErfA5IQ '
 
+    RelativeLayout:
+        pos_hint: {'center_x': 0.85, 'center_y': 0.2}
+        padding:10
+
+        Label:
+            text: '~Prabin | Navaneet'
+            font_size: 20
 
 
     AnchorLayout:

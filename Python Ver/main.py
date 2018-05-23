@@ -40,8 +40,8 @@ Cam.op_file_format='txt'
 Cam.path='cord.txt'
 
 global SeqArray
-SeqArray=np.array([['dwell', 'SHM', 0, 0],
-['dwell', 'SHM', 0, 0]])
+SeqArray=np.array([['Dwell', 'SHM', 0, 0],
+['Dwell', 'SHM', 0, 0]])
 
 class CustomDropDown(BoxLayout):
     pass
@@ -119,8 +119,8 @@ class PostScreen(Screen):
             npoints = len(Cam.x)
 
             for i in range(npoints):
-                xpoint = str(Cam.x[i])
-                ypoint = str(Cam.y[i])
+                xpoint = float(Cam.x[i])
+                ypoint = float(Cam.y[i])
                 col=0
                 worksheet.write(i, 0, xpoint)
                 worksheet.write(i, 1, ypoint)
